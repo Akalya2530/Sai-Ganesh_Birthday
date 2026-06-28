@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sai Ganesh ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:linear-gradient(180deg,#ffe6f0,#fff7d6);
+overflow-x:hidden;
+font-family:sans-serif;
+scroll-behavior:smooth;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+}
+
+.cat{
+font-size:100px;
+animation:walk 5s infinite;
+}
+
+@keyframes walk{
+0%{transform:translateX(-200px);}
+100%{transform:translateX(200px);}
+}
+
+.birthday-text{
+font-family:'Dancing Script';
+font-size:3rem;
+color:#ff1493;
+animation:fade 3s infinite alternate;
+}
+
+@keyframes fade{
+from{opacity:.5;}
+to{opacity:1;}
+}
+
+.scroll{
+font-size:20px;
+margin-top:20px;
+animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+50%{transform:translateY(10px);}
+}
+
+.scratch{
+background:#ff4d88;
+color:white;
+padding:25px 50px;
+border-radius:20px;
+font-size:24px;
+cursor:pointer;
+box-shadow:0 0 20px pink;
+}
+
+.hidden{
+display:none;
+}
+
+#age{
+font-size:28px;
+color:#d6006d;
+margin-top:20px;
+font-weight:bold;
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:float 4s linear forwards;
+}
+
+@keyframes float{
+0%{
+opacity:1;
+transform:translateY(0);
+}
+100%{
+opacity:0;
+transform:translateY(-400px);
+}
+}
+
+.letter{
+max-width:850px;
+background:#f8e7c2;
+padding:40px;
+border:12px solid #8b5a2b;
+border-radius:15px;
+font-family:'Cinzel';
+line-height:2;
+box-shadow:0 0 30px rgba(0,0,0,.3);
+}
+
+h1{
+margin:0;
+}
+
+.oldtitle{
+font-size:40px;
+color:#7a3e00;
+}
+
+.signature{
+margin-top:30px;
+font-size:25px;
+}
+
+.flowers{
+font-size:50px;
+}
+
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="remo-bgm.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+
+<div class="cat">
+🐱💐🎂❤️
+</div>
+
+<h1 class="birthday-text">
+Happiest Birthday To My Special Person ❤️
+</h1>
+
+<h1 class="birthday-text">
+Happiest Birthday Sai Ganesh 😊
+</h1>
+
+<div class="scroll">
+⬇ Scroll Down ⬇
+</div>
+
+</section>
+
+<section>
+
+<div class="scratch" onclick="openGift()">
+🎁 Scratch / Open Gift
+</div>
+
+<div id="age" class="hidden"></div>
+
+</section>
+
+<section>
+
+<div class="letter">
+
+<div class="oldtitle">
+📜 Royal Birthday Letter 📜
+</div>
+
+<br>
+
+Once again happy born day dear🤗,
+
+<br><br>
+
+It's been actually 2 years since we started working on the same project.
+
+Since that day, you have been my best friend, and if I tell the truth, I feel more than friendship ❤️.
+
+You are my good companion, my best and sweetest teammate 🥰, sometimes my best lecturer (My Guru Garu 😊), my biggest supporter 🫡.
+
+<br><br>
+
+When we worked together, we used to talk for long hours without even considering the time.
+
+Those memories are still safely kept in my heart 💖.
+
+<br><br>
+
+If I have hurt you anytime, please forget that... but don't forget me ❤️
+
+<br><br>
+
+Really, I had a great and memorable journey with you 💕
+
+I wish this beautiful bond continues forever.
+
+You deserve so many good things in life, and definitely you will always be in my prayers 🙏
+
+Whatever you desire to achieve, may all your dreams come true this year ✨
+
+<br><br>
+
+Finally, I'll always be with you.
+
+Be happy always pannikutty 🐷😄🤗
+
+Take care ❤️
+
+<br><br>
+
+✨ Happy Birthday Once Again ✨
+
+<div class="signature">
+
+By Yours,
+
+💭 The One Who Always Wishes Your Happiness ❤️
+
+<br><br>
+
+Akalya 🌸
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function openGift(){
+
+document.getElementById("age").classList.remove("hidden");
+
+createHearts();
+
+updateAge();
+
+setInterval(updateAge,1000);
+
+}
+
+function updateAge(){
+
+const birth=new Date("1999-06-30T00:00:00");
+
+const now=new Date();
+
+let diff=now-birth;
+
+let seconds=Math.floor(diff/1000);
+
+let minutes=Math.floor(seconds/60);
+
+let hours=Math.floor(minutes/60);
+
+let days=Math.floor(hours/24);
+
+let years=Math.floor(days/365.25);
+
+document.getElementById("age").innerHTML=
+`
+❤️ Sai Ganesh has been in this world ❤️
+
+<br><br>
+
+${years} Years
+
+<br>
+
+${days} Days
+
+<br>
+
+${hours} Hours
+
+<br>
+
+${minutes} Minutes
+
+<br>
+
+${seconds} Seconds
+`;
+
+}
+
+function createHearts(){
+
+for(let i=0;i<50;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.bottom="0";
+
+heart.style.fontSize=(20+Math.random()*40)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),4000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
